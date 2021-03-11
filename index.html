@@ -4,6 +4,8 @@
     <head>
         <title>JavaScript_stuff</title>
         <script>
+            var audio = new Audio('Cyberpoonk.wav');
+            audio.volume = 0.05;
             var dateV = new Date();
             var dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
             var ampm = "AM";
@@ -18,10 +20,8 @@
             function print_current_page(){
                 var myobj = document.getElementById("fatguy");
                 myobj.remove(); 
-                myobj = document.getElementById("fatguy0");
+                var myobj = document.getElementById("fatguy0");
                 myobj.remove(); 
-                var audio = new Audio('Cyberpoonk.wav');
-                audio.volume = 0.05;
                 audio.play();
                 document.body.style.backgroundImage = "url('cyber.png')";
                 document.body.style.backgroundSize = "100% 100vh";
