@@ -1,32 +1,43 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html lang="sv">
     <head>
-        <title>merry christmas</title>
-        <link rel="stylesheet" href="mystyle.css">
-        <style>*{
-            background-color: red;
+        <title>JavaScript_stuff</title>
+        <script>
+            var dateV = new Date();
+            var dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            var ampm = "AM";
+            var hour = dateV.getHours();
+            if (hour >= 12){
+                if(hour > 12){
+                    hour -= 12;
+                }
+                ampm = "PM";
+            }
+            console.log(dayNames[(dateV.getDay()) - 1], "\n" + hour, ampm +" : "+ dateV.getMinutes() +" : "+ dateV.getSeconds());
+            function print_current_page(){
+                var audio = new Audio('Cyberpoonk.wav');
+                audio.volume = 0.05;
+                audio.play();
+                document.body.style.backgroundImage = "url('cyber.png')";
+                document.body.style.backgroundSize = "100% 100vh";
+                var jeffass = 0.00;
+                var image = document.getElementById("leg")
+                image.style.opacity = 1;
+                }
+        </script>
+        <style> 
+        #leg{
+            opacity: 0;
         }
-        h1{
-            color: white;
-        }
-        a{
-            color: white;
-        }            
         </style>
     </head>
     <body>
-        <h1>Happy Chrimer</h1>
-        <ul>
-            <li><a href="https://www.youtube.com/watch?v=iR-K2rUP86M">Generic Christmas song #1</a></li>
-            <li><a href="https://www.youtube.com/watch?v=l83vT2svg3g">Generic Christmas song #2</a></li>
-            <li><a href="https://www.youtube.com/watch?v=atdsXPYqD7U">Generic Christmas song #3</a></li>
-            <li><a href="https://www.youtube.com/watch?v=qpb-YflRn0s">Generic Christmas song #4</a></li>
-            <li><a href="https://www.youtube.com/watch?v=YebMt5DDSF4">Generic Christmas song #5</a></li>
-            <li><a href="https://www.youtube.com/watch?v=F5lfrn0YHYQ">Generic Christmas song #6</a></li>
-            <li><a href="https://www.youtube.com/watch?v=NCRQ5XaXMW4">Generic Christmas song #7</a></li>
-            <li><a href="https://www.youtube.com/watch?v=nPAuvfqocFY">Generic Christmas song #8</a></li>
-            <li><a href="https://www.youtube.com/watch?v=laTumv5TmU0">Generic Christmas song #9</a></li>
-            <li><a href="https://www.youtube.com/watch?v=NCqdci9ZdUY">Generic Christmas song #10</a></li>
-        </ul>
+        <p></p>
+        <p>Click for funny meme</p>
+        <button onclick="print_current_page()">Funny meme</button>
+        <figure>
+            <img id="leg" src="legass.png" alt="">
+        </figure>
     </body>
 </html>
