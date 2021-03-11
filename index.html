@@ -1,97 +1,45 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html lang="sv">
-
-<head>
-    <title>Funny meme</title>
-    <meta charset="utf-8">
-    <style>
-        h1{
-            color: blue;
-            border: 10px solid blue;
-            margin: 69px;
-            padding: 24px;
-            text-decoration: underline yellow;
-            font-size: 420px;
+    <head>
+        <title>JavaScript_stuff</title>
+        <script>
+            var dateV = new Date();
+            var dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            var ampm = "AM";
+            var hour = dateV.getHours();
+            if (hour >= 12){
+                if(hour > 12){
+                    hour -= 12;
+                }
+                ampm = "PM";
+            }
+            console.log(dayNames[(dateV.getDay()) - 1], "\n" + hour, ampm +" : "+ dateV.getMinutes() +" : "+ dateV.getSeconds());
+            function print_current_page(){
+                var myobj = document.getElementById("fatguy");
+                myobj.remove(); 
+                var audio = new Audio('Cyberpoonk.wav');
+                audio.volume = 0.05;
+                audio.play();
+                document.body.style.backgroundImage = "url('cyber.png')";
+                document.body.style.backgroundSize = "100% 100vh";
+                var jeffass = 0.00;
+                var image = document.getElementById("leg")
+                image.style.opacity = 1;
+                }
+        </script>
+        <style> 
+        #leg{
+            opacity: 0;
         }
-        h2{
-            color: purple;
-            border: 11px solid purple;
-            margin: 6px;
-            padding: 2px;
-        }
-        h3{
-            color:red;
-            border: 20px ridge red;
-            margin: 9px;
-            padding: 14px;
-        }
-        h4{
-            color:lightsalmon;
-            border: 21px solid lightsalmon;
-            margin: 23px;
-            padding: 1px;
-        }
-        h5{
-            color:aliceblue;
-            border: 30px double aliceblue;
-            margin: 1px;
-            padding: 4px;
-        }
-        h6{
-            color: yellow;
-            border: 3px dotted yellow;
-            margin: 1px;
-            padding: 4px;
-        }
-        p{
-            color:green;
-            border: 13px groove green;
-            margin: 20px;
-            padding: 40px;
-        }
-        a{
-            color:magenta;
-            border: 69px ridge magenta;
-            margin: 69px;
-            padding: 69px;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Rubrik 1</h1>
-    <h2>Rubrik 2</h2>
-    <h3>Rubrik 3</h3>
-    <h4>Rubrik 4</h4>
-    <h5>Rubrik 5</h5>
-    <h6>Rubrik 6</h6>
-
-
-
-    <a href="#">First Link</a>
-    <a href="#">Second Link</a>
-    <a href="#">Third Link</a>
-    <a href="#">Fourth Link</a>
-
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
-        Why do we use it?
-
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at
-        its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-        opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
-        packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
-        will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by
-        accident, sometimes on purpose (injected humour and the like).
-
-    </p>
-
-
-</body>
-
+        </style>
+    </head>
+    <body>
+        <p></p>
+        <p>Click for funny meme</p>
+        <button id="fatguy" onclick="print_current_page()">Funny meme</button>
+        <figure>
+            <img id="leg" src="legass.png" alt="">
+        </figure>
+    </body>
 </html>
