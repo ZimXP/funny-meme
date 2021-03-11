@@ -18,6 +18,8 @@
             function print_current_page(){
                 var myobj = document.getElementById("fatguy");
                 myobj.remove(); 
+                myobj = document.getElementById("fatguy0");
+                myobj.remove(); 
                 var audio = new Audio('Cyberpoonk.wav');
                 audio.volume = 0.05;
                 audio.play();
@@ -36,7 +38,7 @@
     </head>
     <body>
         <p></p>
-        <p>Click for funny meme</p>
+        <p id="fatguy0">Click for funny meme</p>
         <button id="fatguy" onclick="print_current_page()">Funny meme</button>
         <figure>
             <img id="leg" src="legass.png" alt="">
